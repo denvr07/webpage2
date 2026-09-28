@@ -1,0 +1,341 @@
+:root {
+  --sonora-ink: #142326;
+  --sonora-muted: #647477;
+  --sonora-paper: #f4f1e9;
+  --sonora-coral: #e56448;
+  --sonora-lime: #d8e269;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 0;
+  color: var(--sonora-ink);
+  background: var(--sonora-paper);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.navbar {
+  min-height: 4.5rem;
+  padding-inline: max(1.5rem, calc((100vw - 1320px) / 2));
+  background: var(--sonora-ink) !important;
+}
+
+.navbar-brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.brand-mark {
+  color: var(--sonora-lime);
+}
+
+.navbar .nav-link {
+  color: #c4ccca;
+  font-size: .88rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #fff;
+}
+
+.bag-link {
+  color: white;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.bag-link span {
+  display: inline-grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: .4rem;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--sonora-ink);
+  background: var(--sonora-lime);
+}
+
+.carousel {
+  margin-bottom: 0;
+}
+
+.carousel-item {
+  height: min(47rem, calc(100svh - 4.5rem));
+  min-height: 36rem;
+  overflow: hidden;
+  background: #263638;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+  opacity: .72;
+}
+
+.carousel-item::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(12 23 25 / 78%) 0%, rgb(12 23 25 / 37%) 48%, rgb(12 23 25 / 8%) 100%);
+  content: "";
+}
+
+.carousel-item:nth-child(2)::after {
+  background: linear-gradient(90deg, rgb(12 23 25 / 17%) 0%, rgb(12 23 25 / 42%) 52%, rgb(12 23 25 / 76%) 100%);
+}
+
+.carousel-caption {
+  z-index: 1;
+  right: 12%;
+  bottom: clamp(5rem, 15vh, 9rem);
+  left: 12%;
+  text-align: left;
+}
+
+.carousel-caption:not(.text-start):not(.text-end) {
+  left: 20%;
+}
+
+.carousel-caption h1 {
+  max-width: 12ch;
+  margin: .7rem 0 1rem;
+  font-size: clamp(3.25rem, 7vw, 6.5rem);
+  font-weight: 650;
+  line-height: .98;
+  letter-spacing: 0;
+}
+
+.hero-kicker,
+.feature-number {
+  color: var(--sonora-lime);
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+
+.carousel-caption .hero-copy {
+  max-width: 32rem;
+  margin-bottom: 1.8rem;
+  color: #e1e7e4;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--sonora-ink);
+  --bs-btn-bg: var(--sonora-lime);
+  --bs-btn-border-color: var(--sonora-lime);
+  --bs-btn-hover-color: var(--sonora-ink);
+  --bs-btn-hover-bg: #e5ed8b;
+  --bs-btn-hover-border-color: #e5ed8b;
+  --bs-btn-active-color: var(--sonora-ink);
+  --bs-btn-active-bg: #c3ce4d;
+  --bs-btn-active-border-color: #c3ce4d;
+  --bs-btn-font-weight: 700;
+  border-radius: 2px;
+}
+
+.btn-lg {
+  padding: .9rem 1.25rem;
+  font-size: .95rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 2rem;
+  height: .2rem;
+  border: 0;
+}
+
+.marketing {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  padding-inline: 2rem;
+}
+
+.feature-number {
+  color: var(--sonora-coral);
+}
+
+.marketing h2 {
+  margin: 1.1rem 0 .75rem;
+  font-size: 1.55rem;
+  font-weight: 650 !important;
+}
+
+.marketing .col-lg-4 p:not(.feature-number) {
+  max-width: 22rem;
+  margin-inline: 0;
+  color: var(--sonora-muted);
+  line-height: 1.65;
+}
+
+.text-link {
+  color: var(--sonora-ink);
+  font-size: .87rem;
+  font-weight: 700;
+  text-decoration-color: var(--sonora-coral);
+  text-underline-offset: .25em;
+}
+
+.featurette-divider {
+  margin: 4rem 0;
+  border-color: #bfc7bd;
+  opacity: .65;
+}
+
+.featurette {
+  align-items: center;
+}
+
+.featurette-heading {
+  margin-top: 0;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 600 !important;
+  line-height: 1.08;
+}
+
+.featurette-heading .text-body-secondary {
+  color: var(--sonora-coral) !important;
+}
+
+.featurette .lead {
+  max-width: 34rem;
+  margin-top: 1.2rem;
+  color: var(--sonora-muted);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.featurette-image {
+  width: 100%;
+  max-height: 34rem;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.footer-cta {
+  margin: 2rem 0 4rem;
+  padding: clamp(2rem, 7vw, 5rem);
+  color: white;
+  background: var(--sonora-ink);
+}
+
+.footer-cta h2 {
+  max-width: 12ch;
+  margin: .8rem 0 1.3rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+}
+
+.footer-price {
+  margin-bottom: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.footer-price span {
+  display: block;
+  margin-top: .35rem;
+  color: #bac5c1;
+  font-size: .85rem;
+  font-weight: 400;
+}
+
+footer.container > p {
+  color: var(--sonora-muted);
+  font-size: .85rem;
+}
+
+footer a {
+  color: inherit;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.btn-bd-primary {
+  --bs-btn-color: var(--sonora-ink);
+  --bs-btn-bg: var(--sonora-lime);
+  --bs-btn-border-color: var(--sonora-lime);
+  --bs-btn-hover-color: var(--sonora-ink);
+  --bs-btn-hover-bg: #e5ed8b;
+  --bs-btn-hover-border-color: #e5ed8b;
+  --bs-btn-focus-shadow-rgb: 216, 226, 105;
+}
+
+.bd-mode-toggle .bi {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -.125em;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+@media (max-width: 767.98px) {
+  .carousel-item {
+    height: 42rem;
+    min-height: 34rem;
+  }
+
+  .hero-image {
+    object-position: 62% center;
+  }
+
+  .carousel-item::after,
+  .carousel-item:nth-child(2)::after {
+    background: linear-gradient(0deg, rgb(12 23 25 / 84%) 0%, rgb(12 23 25 / 45%) 60%, rgb(12 23 25 / 20%) 100%);
+  }
+
+  .carousel-caption,
+  .carousel-caption:not(.text-start):not(.text-end) {
+    right: 8%;
+    bottom: 5rem;
+    left: 8%;
+  }
+
+  .carousel-caption h1 {
+    font-size: clamp(3rem, 12vw, 4.75rem);
+  }
+
+  .marketing {
+    padding-top: 4rem;
+  }
+
+  .marketing .col-lg-4 {
+    padding-inline: calc(var(--bs-gutter-x) * .5);
+  }
+
+  .featurette-divider {
+    margin: 3rem 0;
+  }
+
+  .featurette-image {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
